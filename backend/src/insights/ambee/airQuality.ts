@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { AMBEE_API_KEY } from 'src/configuration';
-import { AmbeeError } from '.';
+import axios from "axios";
+import { AMBEE_API_KEY } from "src/configuration";
+import { AmbeeError } from ".";
 
 interface AirQualityInfo {
     pollutant: string;
@@ -29,15 +29,21 @@ interface AirQualityResponse {
 export const getAirQuality = async (lat: number, lng: number): Promise<AirQualityResponse> => {
     try {
         const response = await axios.request({
-            url: 'https://api.ambeedata.com/latest/by-lat-lng',
-            params: { lat: lat.toString(10), lng: lng.toString(10) },
-            headers: { 'x-api-key': AMBEE_API_KEY, 'Content-type': 'application/json' },
+            url: "https://api.ambeedata.com/latest/by-lat-lng",
+            params: { 
+                lat: lat.toString(10), 
+                lng: lng.toString(10) 
+            },
+            headers: { 
+                "x-api-key": AMBEE_API_KEY, 
+                "Content-type": "application/json" 
+            },
         });
         return response.data;
     } catch (error) {
         return {
             error,
-            message: 'failed',
+            message: "failed",
             stations: [],
         };
     }
