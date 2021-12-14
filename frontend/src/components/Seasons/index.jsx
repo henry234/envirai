@@ -27,27 +27,27 @@ const Seasons = (props) => {
     const [allWeather, setWeather] = useState([
         {
         avgTemp: "41°",
-        date: "April 19",
+        date: "December 05",
         weather: "rainy"
         },
         {
         avgTemp: "46°",
-        date: "April 20",
+        date: "December 06",
         weather: "cloudy"
         },
         {
         avgTemp: "49°",
-        date: "April 21",
+        date: "December 07",
         weather: "cloudy"
         },
         {
         avgTemp: "59°",
-        date: "April 22",
+        date: "December 08",
         weather: "cloudy"
         },
         {
         avgTemp: "58°",
-        date: "April 23",
+        date: "December 09",
         weather: "rainy"
         }
     ])

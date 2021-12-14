@@ -20,9 +20,7 @@ const options = {
 const DateComponent = (props) => {
     return (
         <div className="date">
-            {
-                dateFromDay(2021, props.day).toLocaleDateString(undefined, options)
-            }
+            December 13, 2021
         </div>
     )
 }
